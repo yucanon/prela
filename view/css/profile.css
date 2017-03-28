@@ -1,0 +1,163 @@
+/*!
+ * Start Bootstrap - Blog Post HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+
+.profile_photo{
+  max-width:100%;
+  margin:0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top:90px;
+  width: 960px;
+  min-height:500px;
+  box-sizing:border-box;
+  padding-bottom:30px;
+}
+
+.row h4{
+  margin:0px;
+  padding-top:7px;
+  padding-left:7px;
+  background-color:#f3b62a;
+  color:#ffffff;
+  height:30px;
+  border-radius: 4px;
+  text-align:left;
+}
+
+.btn-primary{
+  color: #fff;
+  background-color:#6ba8a3;
+  border-color: #6ba8a3;
+}
+
+
+.profile{
+  padding:10px;
+}
+
+.request{
+  min-height:420px;
+}
+
+#Box ul.slide_type_c{
+  width: 600px;
+  height:140px;
+}
+
+.slick-prev{
+  left:0px;
+  background-color:#f3b62a;
+  background-image:url('../images/left_arrow.png');
+  z-index:1;
+}
+
+.slick-next{
+  right:0px; 
+  background-color:#f3b62a;
+  background-image:url('../images/right_arrow.png');
+}
+
+.switch{
+  visibility:hidden;
+}
+
+h3{
+  position: relative;
+  color: #999;
+  font-size: 1.6em;
+  margin: 0 0 1.5em;
+  padding: 0.5em 0.5em 0.5em 1.7em;
+  border-bottom: 3px solid #f3b62a;
+}
+
+h3:before{
+  content: '';
+  position: absolute;
+  background: #f3b62a;
+  top: 0;
+  left: 0.4em;
+  height: 12px;
+  width: 12px;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+
+h3:after{
+  content: '';
+  position: absolute;
+  background:#F8D88D;
+  top: 1.0em;
+  left: 0;
+  height: 8px;
+  width: 8px;
+  -transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+}
+
+@media (max-width: 767px) {
+  .container img{
+  }
+
+}
+
+
+
+@media (max-width: 386px) {
+
+  body{
+  }
+
+  .container{
+    width:100%;
+    margin: 0 auto;
+    padding-top:35px;
+    box-sizing:border-box;
+    background-image:url();
+  }
+
+  .profile {
+    padding: 20px;
+  }
+
+  .profile_photo{
+    max-width:100%;
+    margin:0 auto;
+  }
+
+  #Box{
+    width: 100%;
+    margin-bottom:100px;
+  }
+
+  #Box ul.slide_type_c{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .slick-prev {
+    z-index:1;
+    top:100px;
+    left:0px;
+  }
+
+  .slick-next {
+    top:100px;
+    right:0px; 
+  }
+
+
+
+}

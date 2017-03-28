@@ -1,0 +1,255 @@
+/*!
+ * Start Bootstrap - Blog Post HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.container {
+  margin: 0 auto;
+  padding-top:65px;
+  min-height:500px;
+  box-sizing:border-box;
+}
+
+.row{
+  padding-top:50px;
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.row h4{
+  margin:0px;
+  padding-top:7px;
+  padding-left:7px;
+  background-color:#f3b62a;
+  color:#ffffff;
+  height:30px;
+  border-radius: 4px;
+  text-align:left;
+}
+
+
+.error_msg{
+  color:red;
+}
+
+/*　会話ベーススタイル　*/
+.message {
+  overflow: hidden; 
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+.message span {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.message .speaker-name {
+  display: none;
+}
+.message .speaker-icon {
+  float: left; 
+  width: 64px;
+}
+
+.list-group-item.active{
+  background-color:#FF236B;
+  border-color:#FF236B;
+}
+
+.list-group-item.active:hover{
+  background-color:#fff;
+  color:#FF236B;
+  border-color:#FF236B;
+}
+
+
+/*　吹き出しベーススタイル　*/
+.message .message-content {
+  position: relative;
+  box-sizing: border-box;
+  width: auto;
+  min-height: 64px;
+  margin: 0 160px 0 80px;
+  padding: 1em;
+  color: #333; 
+  border-radius: 10px;
+  background: #FFF;
+  border:1px solid #FF236B;
+}
+
+/*　会話詳細スタイル　*/
+.message .speaker-icon img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/*　吹き出しのしっぽ　*/
+.message .message-content:before {
+  position: absolute;
+  top: 20px; 
+  left: -20px;
+  display: block;
+  width: 0;
+  height: 0;
+  content: '';
+  border: 10px solid transparent;
+  border-right-color: #FF236B;
+}
+
+/*　逆方向の上書きスタイル　*/
+.message.myself .speaker-icon {
+  float: right;
+}
+.message.myself .message-content {
+  margin: 0 80px 0 160px; 
+  color: #000;
+  background: #FFF;
+  border:1px solid #FF236B;
+}
+.message.myself .message-content:before {
+  right: -20px;
+  left: auto;
+  border-color: transparent;
+  border-left-color: #FF236B;
+}
+
+/*　その他の付加的な装飾　*/
+#chat-title {
+  font-size: 19px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-align: center;
+  color: white;
+  border-radius: 0; 
+  background: #4472aa;
+}
+
+.pagetop {
+  padding: 1em; 
+  text-align: center;
+}
+.pagetop a {
+  font-size: 16px;
+  font-size: 1rem;
+  display: inline-block;
+  padding: 0.5em 2em;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 100px; 
+  background: #FF236B;
+}
+
+.message.myself + .message.myself {
+  margin-top: -0.5em;
+}
+
+textarea{
+  width:100%;
+  height:100px;
+  border:solid 1px #FF236B;
+  font-size:16px;
+}
+
+/*　box-sizingの設定　*/
+div,
+p,
+img {
+  box-sizing: border-box;
+}
+
+footer {
+
+}
+
+footer p {
+
+}
+
+@media (max-width: 1159px) {
+
+  .container{
+    width:100%;
+    /*スマフォ横向き対策*/
+    margin: 40px auto 0px;
+    padding-top:95px;
+    box-sizing:border-box;
+    background-image:url();
+  }
+}
+
+@media (max-width: 786px) {
+  .container{
+    max-width:100%;
+    margin: 0 auto;
+    padding-top:85px;
+  }
+}
+
+@media (max-width: 386px) {
+
+  body{
+  }
+
+  .container{
+    width:100%;
+    margin: 0 auto;
+    padding-top:20px;
+    box-sizing:border-box; 
+  }
+
+  .message .message-content {
+    position: relative;
+    box-sizing: border-box;
+    width: auto;
+    min-height: 64px;
+    margin: 0 0px 0 80px;
+    padding: 1em;
+    color: #333; 
+    border-radius: 10px;
+    background: #fFF;
+    border:1px solid #FF236B;
+  }
+
+ .message.myself .message-content {
+    margin: 0 80px 0 0px; 
+    color: #000;
+    background: #FFF;
+    border:1px solid #FF236B;
+  }
+
+  textarea{
+    width:100%;
+    height:30px;
+    border:solid 1px #FF236B;
+  }
+
+
+}
+
+/*iphone5用*/
+@media (max-width: 340px) {
+
+  .container{
+    width:100%;
+    margin: 0 auto;
+    padding-top:30px;
+    box-sizing:border-box;
+    background-image:url();
+  }
+}
+
+
+@media (min-width: 786px) {
+  .container{
+    width: 960px;
+  }
+
+}
+}

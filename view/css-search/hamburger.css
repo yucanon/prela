@@ -1,0 +1,99 @@
+#hamburger {
+	width: 100%;
+	position: fixed;
+	background-color: rgba(255,255,255,0.9);
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+	z-index: 1000;
+	border-bottom: 1px solid rgba(107,169,165, 0.6);
+
+	/*transform: translateY(-200px);*/
+	display: none;
+}
+
+.hamburgerSpacer {
+	height: 0px;
+}
+
+.hamburgerItem {
+	width: 100%;
+	/*border-bottom: 1px solid #ccc;*/
+	padding: 10px;
+}
+
+.hamburgerTextInput {
+	border: rgba(107,169,165, 0.6) 1px solid;
+	border-radius: 6px;
+	box-shadow: 0 4px 5px -5px rgba(0,0,0,0.3);
+	padding : 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left : 10px;
+	font-size: 16px;	/* iPhoneでの拡大対策 */
+}
+
+.hamburgerTextInput:focus {
+	border: 1px solid #6c9ac5;
+	box-shadow: 0 8px 10px -10px rgba(108,154,197,0.7);
+}
+
+.toolbarSeparater{
+	padding-bottom: 6px;
+}
+
+#headerSearchBtn{
+	
+}
+@media ( max-width: 768px) {
+	.boundAnimation {
+		animation: searchBound 2s ease infinite;
+		-moz-animation: searchBound 2s ease infinite;
+	}
+}
+
+#ham_searchsubmit{
+	postion: relative;
+	top : -40px;
+	margin-bottom: -20px;
+	display: inline-block;
+}
+
+#headerSearchIcon:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+@keyframes searchBound {
+	0% { margin-top: 0px; margin-bottom: 0px;}
+	1% { margin-top: 1px; margin-bottom: -1px; transform: scaleY(0.95); }
+	4% { margin-top: -4px; margin-bottom: 4px;transform: scaleY(1.0);}
+	5% { margin-top: -5px; margin-bottom: 5px;transform: scaleY(1.02);}
+	9% { margin-top: 0px;  margin-bottom: 0px; transform : scaleY(1.0);}
+	10%{ margin-top: -1px; margin-bottom: 1px;transform: scaleY(0.95);}
+	29%{ margin-top: 0px;  margin-bottom: -0px;transform: scaleY(1.0);}
+	30% { margin-top: 0px; margin-bottom: 0px;}
+	31% { margin-top: 1px; margin-bottom: -1px;transform: scaleY(0.95);}
+	34% { margin-top: -4px;margin-bottom: 4px; transform: scaleY(1.0);}
+	35% { margin-top: -5px; margin-bottom: 5px;transform: scaleY(1.02);}
+	39% { margin-top: 0px;  margin-bottom: 0px;transform : scaleY(1.0);}
+	40% { margin-top: -1px; margin-bottom: 1px;transform: scaleY(0.95);}
+	50% { margin-top: 0px; margin-bottom: 0px;transform: scaleY(1.0);}
+
+}
+
+@-moz-keyframes searchBound {
+	0% { margin-top: 0px; margin-bottom: 0px;}
+	1% { margin-top: 1px; margin-bottom: -1px; transform: scaleY(0.95); }
+	4% { margin-top: -4px; margin-bottom: 4px;transform: scaleY(1.0);}
+	5% { margin-top: -5px; margin-bottom: 5px;transform: scaleY(1.02);}
+	9% { margin-top: 0px;  margin-bottom: 0px; transform : scaleY(1.0);}
+	10%{ margin-top: -1px; margin-bottom: 1px;transform: scaleY(0.95);}
+	29%{ margin-top: 0px;  margin-bottom: -0px;transform: scaleY(1.0);}
+	30% { margin-top: 0px; margin-bottom: 0px;}
+	31% { margin-top: 1px; margin-bottom: -1px;transform: scaleY(0.95);}
+	34% { margin-top: -4px;margin-bottom: 4px; transform: scaleY(1.0);}
+	35% { margin-top: -5px; margin-bottom: 5px;transform: scaleY(1.02);}
+	39% { margin-top: 0px;  margin-bottom: 0px;transform : scaleY(1.0);}
+	40% { margin-top: -1px; margin-bottom: 1px;transform: scaleY(0.95);}
+	50% { margin-top: 0px; margin-bottom: 0px;transform: scaleY(1.0);}
+}

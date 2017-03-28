@@ -1,0 +1,205 @@
+/*!
+ * Start Bootstrap - Blog Post HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.container {
+  margin: 0 auto;
+  padding-top:65px;
+  min-height:500px;
+  box-sizing:border-box;
+}
+
+.row{
+  padding-top:50px;
+  padding-left:0px;
+  padding-right:0px;
+}
+
+h3{
+  font-size:16px;
+}
+
+.row h4{
+  margin:0px;
+  padding-top:7px;
+  padding-left:7px;
+  background-color:#f3b62a;
+  color:#ffffff;
+  height:30px;
+  border-radius: 4px;
+  text-align:left;
+}
+
+
+
+.post_area{
+  width:300px ;
+}
+
+.post_area form{
+  float:left;
+}
+
+.list-group-item.active{
+  background-color:#f3b62a;
+  border-color:#f3b62a;
+}
+
+.list-group-item.active:hover{
+  background-color:#6ba8a3;
+  border-color:#6ba8a3;
+}
+
+.btn-success{
+  background-color:#6ba8a3;
+  margin-left:0px;
+}
+
+.thumbnail{
+  height:162px;
+}
+
+
+.thumbnail-photo{
+  width:100px;
+  float:left;
+}
+
+.thumbnail-photo img{
+  margin:10px;
+  width:100px;
+  height:100px;
+  float:left;
+}
+
+.thumbnail-box{
+
+}
+
+
+.thumbnail-info {
+  float:left;
+  padding-left:40px;
+}
+
+button, input, select, textarea {
+  font-size:16px;
+}
+
+p{
+  margin-top:10px;
+  margin-bottom:10px;
+  font-size:16px;
+}
+
+
+footer {
+
+}
+
+footer p {
+
+}
+
+@media (max-width: 1159px) {
+
+  .container{
+    width:100%;
+    /*スマフォ横向き対策*/
+    margin: 40px auto 0px;
+    padding-top:95px;
+    box-sizing:border-box;
+    background-image:url();
+  }
+
+}
+
+@media (max-width: 786px) {
+  .container{
+    max-width:100%;
+    margin: 0 auto;
+    padding-top:85px;
+  }
+}
+
+@media (max-width: 386px) {
+
+  body{
+  }
+
+  .container{
+    width:100%;
+    margin: 0 auto;
+    padding-top:20px;
+    box-sizing:border-box; 
+  }
+
+  h3{
+    font-size:16px;
+  }
+
+  .thumbnail-box{
+    height:162px;
+  }
+
+  .thumbnail-info{
+    float:left;
+    padding-left:20px;
+  }
+
+  .thumbnail-info p{
+    font-size:1rem;
+  }
+
+  .thumbnail-info .post_area{
+    width:100%;
+  }
+
+  .btn-success{
+    background-color:#6ba8a3;
+    margin-left:0px;
+  }
+
+  .upfile{
+    width:100%;
+    margin-top:10px;
+    margin-bottom:20px;
+  }
+
+  p{
+    font-size:16px;
+  }
+
+  select{
+    border:1px solid #777;
+    padding:2px;
+  }
+
+  label{
+    font-size:16px;
+  }
+}
+
+/*iphone5用*/
+@media (max-width: 340px) {
+
+  .container{
+    width:100%;
+    margin: 0 auto;
+    padding-top:30px;
+    box-sizing:border-box;
+    background-image:url();
+  }
+}
+
+@media (min-width: 768px) {
+  .container{
+    width: 960px;
+  }
+
+}
+
+
+

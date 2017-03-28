@@ -1,0 +1,257 @@
+/*!
+ * Start Bootstrap - Blog Post HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.container {
+  margin: 0 auto;
+  padding-top:65px;
+  min-height:500px;
+  box-sizing:border-box;
+}
+
+.row{
+  font-size:;
+  padding-top:50px;
+  padding-left:0px;
+  padding-right:0px;
+}
+
+h3{
+  font-size:16px;
+  padding: .5em .75em;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #ccc;
+  margin-top:0px;
+}
+
+.error{
+  color:red;
+}
+
+.row h4{
+  margin:0px;
+  padding-top:7px;
+  padding-left:7px;
+  background-color:#f3b62a;
+  color:#ffffff;
+  height:30px;
+  border-radius: 4px;
+  text-align:left;
+}
+
+.post_area{
+  width:300px ;
+}
+
+.post_area form{
+  float:left;
+}
+
+.list-group-item.active{
+  background-color:#FF236B;
+  border-color:#FF236B;
+}
+
+.list-group-item.active:hover{
+  background-color:#fff;
+  color:#FF236B;
+  border-color:#FF236B;
+}
+
+.btn-success{
+  background-color:#FF236B;
+  border-color: #FF236B;
+}
+
+.btn-success:hover{
+  color:#FF236B;
+  background-color:#FFF;
+  border-color: #FF236B;
+}
+
+
+.thumbnail{
+  height:162px;
+}
+
+.form_group{
+  height:130px;
+}
+
+.form{
+  float:left;
+  margin-top:5px;
+}
+
+.form .btn-success{
+  margin-top:15px;
+}
+
+.thumbnail-photo{
+  width:130px;
+  float:left;
+}
+
+.thumbnail-photo img{
+  margin:10px;
+  width:100px;
+  height:100px;
+}
+
+.thumbnail-box{
+
+}
+
+
+.thumbnail-info {
+  float:left;
+  padding-left:40px;
+}
+
+p{
+  font-size:16px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+/*
+@media (min-width: 992px) {
+  .h-outer {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .h-outer {
+    width: 1170px;
+  }
+}
+  */
+
+/* << Add */
+
+
+/* Add >> */
+
+footer {
+
+}
+
+footer p {
+
+}
+
+@media (max-width: 1159px) {
+
+  .container{
+    width:100%;
+    /*スマフォ横向き対策*/
+    margin: 40px auto 0px;
+    padding-top:95px;
+    box-sizing:border-box;
+    background-image:url();
+  }
+
+  .thumbnail-photo img{
+    margin:10px;
+    width:100px;
+    height:100px;
+    float:left;
+  }
+}
+
+
+@media (max-width: 786px) {
+  .container{
+    max-width:100%;
+    margin: 0 auto;
+    padding-top:85px;
+  }
+}
+
+@media (max-width: 386px) {
+
+  body{
+  }
+
+  .container{
+    width:100%;
+    margin: 0 auto;
+    padding-top:20px;
+    box-sizing:border-box; 
+  }
+
+  .form_group{
+    height:350px;
+  }
+
+
+  .thumbnail-box{
+    height:162px;
+  }
+
+  .thumbnail-info{
+    float:left;
+    padding-left:20px;
+  }
+
+  .thumbnail-info p{
+    font-size:1rem;
+  }
+
+  .thumbnail-info .post_area{
+    width:100%;
+  }
+
+  .thumbnail-photo{
+    position:relative;
+  }
+
+  .thumbnail-photo img{
+    margin:0 45%;
+    width:200px;
+    height:200px;
+
+  }
+
+  .form{
+    margin-top:5px;
+  }
+}
+
+
+@media (max-width: 340px) {
+
+  .container{
+    width:100%;
+    margin: 0 auto;
+    padding-top:30px;
+    box-sizing:border-box;
+    background-image:url();
+  }
+} 
+
+@media (min-width: 768px) {
+  .container{
+    width: 960px;
+  }
+
+}
+
+/*
+@media (min-width: 992px) {
+  .footer-word {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-word {
+    width: 1170px;
+    margin: 0 auto;
+  }
+}
+*/
+
+/* << Add */

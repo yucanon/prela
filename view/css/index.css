@@ -1,0 +1,2390 @@
+@charset "UTF-8";
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /*background: #151515 url('../images/bg.jpg') no-repeat fixed left bottom;
+  background-size: cover;*/
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: Raleway, "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+input{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+
+/* --------------------------------
+ * parts
+ * -------------------------------- */
+.heading {
+  position: relative;
+  display: inline-block;
+  margin: 30px 0 15px;
+  padding-bottom: 15px;
+  letter-spacing: 2px;
+  font-size: 3rem;
+  color: #777;
+}
+div#error {
+    color: red;
+    font-size: 8px;
+    position: relative;
+    bottom: 14px;
+    left: 105px;
+}
+.heading::before,
+.heading::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #999;
+  color: #777;
+}
+.heading::before {
+  bottom: 5px;
+}
+.users {
+  color: #fff;
+}
+.users::before,
+.users::after {
+  border-bottom: 1px solid #fff;
+}
+.button {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  border-radius: 4px;
+  border:1px solid #FF236B;
+  background-color: #fff;
+  color: #FF236B;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  position: relative;
+  bottom: 35px;
+}
+.button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.button-showy {
+  background-color: #fff;
+}
+.button-ghost {
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+.header {
+  padding: 0;
+}
+
+iframe[src*="youtube.com"] {
+  width: 100%;
+  max-width: 1280px;
+}
+.site-title-sub {
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  font-size: 2.2rem;
+}
+.site-title-sub::before,
+.site-title-sub::after {
+  content: '';
+  display: inline-block;
+  width: 140px;
+  height: 2px;
+  margin: 0 30px;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.site-title {
+  margin: 50px 0 40px;
+  font-size: 7.6rem;
+}
+.site-description {
+  margin-bottom: 50px;
+  color: #ffffff;
+  font-size: 5em;
+  font-family: "Meiryo-bold";
+}
+.buttons .button {
+  margin: 10px;
+}
+
+
+/* --------------------------------
+ * about
+ * -------------------------------- */
+.about {
+  padding: 80px 30px;
+  background-color: #fff;
+  color: #333;
+}
+.about-text {
+  margin: 30px 0;
+  line-height: 2.5;
+  font-size: 12px;
+}
+
+
+/* --------------------------------
+ * works
+ * -------------------------------- */
+.works {
+  padding: 80px 0;
+  background-color: #6ba8a4;
+}
+.works-wrapper {
+  display: table;
+  width: 100%;
+  max-width: 1355px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+}
+.work-box {
+  position: relative;
+  display: table-cell;
+}
+.work-image {
+  display: block;
+  width: 100%;
+  height: 205px;
+  margin: 0 0 60%;
+}
+.work-image1 {
+  position: relative;
+  top: 203px; 
+}
+.work-description {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  overflow-y: auto;
+}
+.work-description-inner {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.work-text {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+.work-text .button {
+  width: 60%;
+  margin-top: 20px;
+  padding: 3px;
+}
+.work-box::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: no-repeat;
+  background-size: 100% 100%;
+  opacity: 1;
+}
+.work-box.tree::after {
+  background-image: url('../images/camera1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.work-box.building::after {
+  background-image: url('../images/camera2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+.work-box.lake::after {
+  background-image: url('../images/camera3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+.work-box.sky::after {
+  background-image: url('../images/camera4.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  
+}
+/*.work-box:nth-child(odd) .work-image {
+  margin: 60% 0 0;
+}*/
+.work-box:nth-child(odd) .work-description,
+.work-box:nth-child(odd)::after {
+  top: 0;
+}
+
+
+/* --------------------------------
+ * skills
+ * -------------------------------- */
+.skills {
+  padding: 80px 0;
+  background-color: #fff;
+  color: #333;
+}
+.skills-wrapper {
+  display: table;
+  width: 80%;
+  margin: 50px auto 0;
+  table-layout: fixed;
+}
+.skill-box {
+  display: table-cell;
+}
+.skill-tool {
+    bottom: -25px;
+    display: none;
+    position: relative;
+}
+.skill-matching {
+    bottom: -25px;
+    display: none;
+    position: relative;
+}
+.skill-jobsearch {
+    bottom: -25px;
+    display: none;
+    position: relative;
+}
+/*.skill-icon {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+  border: 4px solid;
+  border-radius: 50%;
+  color: #f1b400;
+  font-size: 8rem;
+  line-height: 142px;
+}*/
+.skill-images {
+  width: 320px;
+  height: 213px;
+}
+.skill-title {
+  margin: 20px 20px 20px;
+  font-size: 2rem;
+}
+.skill-text {
+  margin: 0 20px;
+  line-height: 2;
+}
+
+.skills-wrapper_mb {
+  display: none;
+  width: 80%;
+  margin: 50px auto 0;
+  table-layout: fixed;
+}
+.skill-box_mb {
+  display: table-cell;
+}
+
+.skill-images_mb {
+  width: 320px;
+  height: 213px;
+}
+.skill-title_mb {
+  margin: 20px 20px 20px;
+  font-size: 2rem;
+}
+.skill-text_mb {
+  margin: 0 20px;
+  line-height: 2;
+}
+/* --------------------------------
+ * step
+ * -------------------------------- */
+.step-image {
+  left: -5px;
+  display: none;
+  position: relative;
+}
+/* --------------------------------
+ * safety
+ * -------------------------------- */
+.safety_pc {
+  float: left;
+}
+#safety-wrapper {
+  margin: 0 auto;
+  width: 960px;
+  padding-left: 140px;
+}
+.safety_pc h3 {
+  font-size: 25px;
+  color: #636363;
+}
+.safety_pc p {
+  position: relative;
+  bottom: 30px;
+  left: 50px;
+  color: #636363;
+  font-size: 15px;
+  text-align: left;
+}
+#safety_1 {
+  left: -5px;
+  display: none;
+  position: relative;
+  background-color: #e6e6e6;
+  height: 400px;
+}
+#safety_2 {
+  right: -25px;
+  display: none;
+  position: relative;
+  background-color: #e6e6e6;
+  height: 400px;
+}
+.safety-image {
+  position: relative;
+  bottom: 25px;
+}
+/* --------------------------------
+ * signup
+ * -------------------------------- */
+#signup-title {
+  font-size: 30px;
+  margin: 0 auto;
+  color: #333333;
+} 
+#signup-text {
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0 auto;
+  color: #333333;
+  text-align: center;
+}
+#signup_pc_1 {
+  top: -15px;
+  bottom: 10px;
+  display: none;
+  position: relative;
+}
+#signup_pc_2 {
+  right: -5px;
+  top: 85px;
+  display: none;
+  position: relative;
+}
+.signup-image_pc {
+  width: 100%;
+}
+#signup_link {
+  width: 490px;
+  margin: 0 auto;
+  padding-left: 80px;
+  position: relative;
+  bottom: 10px;
+  right: 275px;
+}
+#signup_link a {
+  color: #fff;
+  text-decoration: none;
+}
+#signup_link a p {
+  text-align: center;
+  width: 490px;
+  height: 65px;
+  padding-bottom: 78px;
+  position: relative;
+  bottom: 10px;
+  font-size: 30px;
+  line-height: 2.7;
+  padding-top: 0;
+  background-color: #f3b62a;
+  border-radius: 62px;
+  cursor: pointer;
+}
+/* --------------------------------
+ * contact
+ * -------------------------------- */
+/*.contact {
+  padding: 80px 0 150px;
+}
+.contact-form {
+  width: 50%;
+  margin: 50px auto 0;
+}
+.contact-form input[type=text],
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+.contact-form input[type=text]:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5) inset;
+}
+.contact-form textarea {
+  height: 150px;
+}
+.contact-form input[type=submit] {
+  display: block;
+  width: 200px;
+  margin: 40px auto 0;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.contact-form input[type=submit]:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}*/
+/*--------------------------------- 
+ * signup01.png
+ *---------------------------------*/
+.signup-image {
+  max-width: 960px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+  width: 30%;
+
+}
+
+/* --------------------------------
+ * footer
+ * -------------------------------- */
+.footer {
+  padding: 12px 0;
+  font-size: 1.3rem;
+}
+
+/* --------------------------------
+ * sign up  
+ * -------------------------------- */
+ /*<<< ここからcopy*/
+#sign_up {
+  -moz-border-radius: 6px;
+  background: #fafafa;
+  -webkit-border-radius: 6px;
+  border: 1px solid #536376;
+  -webkit-box-shadow: rgba(0,0,0,.6) 0px 2px 12px;
+  -moz-box-shadow:  rgba(0,0,0,.6) 0px 2px 12px;
+  padding: 14px 22px;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto 500px auto;
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  
+}
+
+.log_in{
+  color:#000;
+}
+#close {
+  cursor: pointer;
+}
+#close::before {
+  position: absolute;
+  top: 0.2em;
+  right: 0.6em;
+  width: 0.2em;
+  height: 1em;
+  content: "";
+  background-color: #000;
+  transform: rotate(45deg);
+  font-size: 23px;
+  cursor: pointer;
+}
+
+#close::after {
+  position: absolute;
+  top: 0.6em;
+  right: 0.2em;
+  width: 1em;
+  height: 0.2em;
+  content: "";
+  background-color: #000;
+  transform: rotate(225deg);
+  font-size: 23px;
+  cursor: pointer;
+}
+
+/*.tw_login_img{
+  width:175px;
+  height:42px;
+}*/
+
+.fb_login_img{
+  width:175px;
+  height:45px;
+}
+
+
+#sign_up h1 {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.form-item {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+
+
+.form-item input {
+  background: #fafafa;
+  border: none;
+  border-bottom: 2px solid #e9e9e9;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+.form-item input:focus {
+  border-bottom: 2px solid #c0c0c0;
+  outline: none;
+}
+
+.button-panel {
+  margin: 3em 0 0;
+  width: 100%;
+}
+
+.button-panel .login {
+  background: #f16272;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+
+.button:hover {
+  background: #ee3e52;
+}
+.button-ghost:hover {
+  background-color: #D29E04;
+}
+.close{
+  text-align:right;
+}
+
+#cancel { background-position: -198px -36px; }
+#log_in { background-position: -291px -36px; }
+#cancel:hover { background-position: -198px -67px; }
+#cancel:active { background-position: -198px -98px; }
+#log_in:hover { background-position: -291px -67px; }
+#log_in:active { background-position: -291px -98px; }
+#close_x { 
+    width: 24px; height: 23px;
+    overflow: hidden; line-height: 1000px;
+    display: block;
+    position: absolute; top: 5px; right: 5px;
+    background-position: -387px -102px;
+}
+
+
+#usage { background-position: -323px -172px; width: 67px; height: 22px;}
+
+/*<<<ここまでcopy*/
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+.clearfix {
+  /*zoom: 1;*/
+}
+
+/* --------------------------------
+ * smart phone
+ * -------------------------------- */
+@media (max-width: 1280px) {
+  .work-image1 {
+    position: relative;
+    top: 184px; 
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    background-color: #fff;
+  }
+  .button {
+    width: 200px;
+  }
+  .buttons {
+    position: relative;
+    bottom: 150px;
+  }
+}
+@media (max-width: 1024px) {
+  /*iPad,iPad mini横対応*/
+  body {
+    background-image: none;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+  }
+  /*body::before {
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/bg_sp.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    -webkit-background-size: cover;
+  }*/
+  .header {
+    position: relative;
+    top: 85px;
+    display: block;
+  }
+  .work-image1 {
+    position: relative;
+    top: 154px; 
+  }
+  div#skill-box {
+    position: relative;
+    right: 50px;
+  }
+  .skill-box2 {
+    position: relative;
+    right: -50px;
+  }
+  img#skill-images {
+    position: relative;
+    right: 25px;
+  }
+  img#skill-images2 {
+    position: relative;
+    right: 25px;
+  }
+  img#skill-images3 {
+    position: relative;
+    right: 25px;
+  }
+  #sign_up {
+    width: 436px;
+    height: 320px;
+  }
+  #userid {
+    font-size: 16px;
+  }
+  #password {
+    font-size: 16px;
+  }
+  .fb_login_img{
+    width: 100%;
+    height: 80px;
+  }
+}
+@media (max-width: 960px) {
+  /*androidタブレット横対応*/
+  .buttons {
+    position: relative;
+    bottom: 50px;
+  }
+  .skill-images {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    left: 0px;
+  }
+  .skill-text {
+    font-size: 10px;
+  }
+  .work-image1 {
+    position: relative;
+    top: 145px; 
+  }
+  #signup-title {
+    font-size: 20px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text {
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+  }
+  #signup_pc_1 {
+    width: 400px;
+    top: -15px;
+    bottom: 10px;
+    display: none;
+    position: relative;
+  }
+  #signup_pc_2 {
+    width: 260px;
+    right: -5px;
+    top: 85px;
+    display: none;
+    position: relative;
+  }
+  .signup-image_pc {
+    width: 100%;
+  }
+  #signup_link {
+    width: 390px;
+    margin: 0 auto;
+    padding-left: 140px;
+    position: relative;
+    bottom: 10px;
+    right: 275px;
+  }
+  #signup_link a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link a p {
+    text-align: center;
+    width: 390px;
+    height: 65px;
+    padding-bottom: 78px;
+    position: relative;
+    bottom: 10px;
+    font-size: 30px;
+    line-height: 2.7;
+    padding-top: 0;
+    background-color: #f3b62a;
+    border-radius: 62px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 800px) {
+  .work-image {
+    height: 207px;
+    background-size: cover;
+  }
+  .work-image1 {
+    position: relative;
+    top: 121px; 
+  }
+  #safety-wrapper {
+    margin: 0 auto;
+    width: 800px;
+    padding-left: 140px;
+  }
+  .safety_pc p {
+    position: relative;
+    bottom: 30px;
+    left: 25px;
+    color: #636363;
+    font-size: 14px;
+    text-align: left;
+  }
+}
+@media (max-width: 773px) {
+  .work-image {
+    height: 210px;
+    background-size: cover;
+  }
+  .work-image1 {
+    position: relative;
+    top: 116px; 
+  }
+  #safety-wrapper {
+    margin: 0 auto;
+    width: 773px;
+    padding-left: 115px;
+  }
+  .safety_pc p {
+    position: relative;
+    bottom: 30px;
+    left: 17px;
+    color: #636363;
+    font-size: 15px;
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  /*iPad,iPad mini縦対応*/
+  body {
+    background-image: none;
+    background-color: #fff;
+    font-size: 1.3rem;
+  }
+  /*body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/bg_sp.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-color: #fff;
+  }*/
+  /*.header-right {
+    position: relative;
+    bottom: 10px;  
+  }*/
+
+   /*.header-right li i {
+    width: 30px;
+    height: 38px;  
+  }*/
+  .safety_sp {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .safety_sp h3 {
+    position: relative;
+    top: 8px;
+    font-size: 20px;
+    color: #636363;
+  }
+  .safety_sp p {
+    position: relative;
+    bottom: 15px;
+    left: 65px;
+    color: #636363;
+    font-size: 12px;
+    text-align: left;
+  }
+  #safety_sp_1 {
+    width: 40%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 300px;
+  }
+  #safety_sp_2 {
+    width: 40%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 300px;
+  }
+  .safety-image {
+    position: relative;
+    bottom: 5px;
+  }  
+  #sign_up {
+    position: absolute;
+    top: 100px;
+    width: 250px;
+    height: 300px;
+  }
+  #userid {
+    font-size: 16px;
+  }
+  #password {
+    font-size: 16px;
+  }
+  .fb_login_img{
+    width: 100%;
+    height: 80px;
+  }
+  .users {
+    position: relative;
+    top: 30px; 
+  }
+  #skill_mb {
+    margin-top: 50px;
+  } 
+  .heading {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+  .button_sp {
+    width: 200px;
+    position: relative;
+    bottom: 300px;
+  }
+  .button:hover {
+    opacity: 1;
+  }
+
+  /* --- header --- */
+  #header_mb {
+    padding-top: 45px;
+    height: 500px;
+    background-color: #fff;
+  }
+  #main_img {
+    z-index: -1;
+  }
+  #pass {
+    display: none;
+  }
+  .header {
+    padding-top: 60px;
+    display: none;
+  }
+  .site-title-sub {
+    font-size: 1.7rem;
+  }
+  .site-title-sub::before,
+  .site-title-sub::after {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+  .site-title {
+    margin-top: 35px;
+    font-size: 5rem;
+  }
+  .site-description {
+    margin-bottom: 100px;
+    position: relative;
+    bottom: 335px;
+    right: 115px;
+    color: #ffffff;
+    font-size: 2.3rem;
+    font-family: "Meiryo-bold";
+    text-align: right;
+  }
+  /* --- about --- */
+  .about {
+    margin-top: 500px;
+    padding: 80px 30px;
+    background-color: #fff;
+    color: #333;
+  }
+  .about-text {
+    line-height: 1.8;
+  }
+
+  /* --- works --- */
+  .works {
+    padding: 0;
+    background-color: #6ba8a4;
+  }
+  .works-wrapper,
+  .work-box {
+    display: block;
+  }
+  .work-image {
+    display: none;
+  }
+  .work-description {
+    position: relative;
+    height: 300px;
+  }
+  .work-box::after {
+    top: 0;
+    height: 100%;
+    background-size: cover;
+  }
+
+  /* --- skills --- */
+  .skills {
+    display: none;
+  }
+  .skills-wrapper_mb,
+  .skill-box_mb {
+    display: block;
+  }
+  .skill-box_mb {
+    margin: 40px auto;
+  }
+  /*.skill-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    line-height: 92px;
+  }*/
+  #tool {
+    left: -5px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+  }
+  #matching {
+    top: -5px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+  }
+  #jobsearch {
+    right: -5px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+  }
+  .skill-images_mb {
+    width: 280px;
+    height: 180px;
+    position: relative;
+    right: 0;
+    left: 0;
+  }
+  .skill-title_mb {
+    margin: 20px 20px 20px;
+    font-size: 2rem;
+    color: #333;
+  }
+  .skill-text_mb {
+    margin: 0;
+    padding-bottom: 50px;
+    color: #333;
+  }
+  .step{
+    display:none;
+  }
+  .safety{
+    display:none;
+  }
+  .signup{
+    display:none;
+  }
+
+  
+  #Box{
+    height:400px;
+    background-color:#fff;
+    margin-top: 35px;
+    margin-bottom: 65px;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    right: 110px;
+  }
+  .slick-slide img {
+    display: block;
+    margin-left: 265px;
+    width: 375px;
+  }
+  #step_mb{
+    background-color:#fff;
+  }
+
+  .slick-prev{
+    display:none;
+  }
+
+  .slick-next{
+    background-image:url('../images/iphone_next_arrow.png');
+    right:100px;
+    top:240px;
+    width:31px;
+    height:51px;
+    z-index:999;
+  }
+  #signup-title_mb {
+    font-size: 25px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text_mb {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  #signup_link_mb {
+    width: 225px;
+    margin-left: 190px;
+  }
+  #signup_link_mb a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link_mb a p {
+    width: 410px;
+    height: 75px;
+    font-size: 30px;
+    padding-left: 15px;
+    padding-top: 17px;
+    background-color: #f3b62a;
+    border-radius: 38px;
+    cursor: pointer;
+  }
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 88px;
+    right: 6px;
+  }
+  .pagetop a {
+    display: block;
+    background-color: #f3b62a;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+    line-height: 6;
+  }
+}
+
+@media (min-width:769px) {
+  /*mb display対応*/
+  #header_mb {
+    display: none;
+  }
+  #skills_mb {
+    display: none;
+  }
+  #step_mb{
+    display:none;
+  }
+  #safety_mb{
+    display:none;
+  }
+  #signup_mb{
+    display:none;
+  }
+}
+@media (max-width: 767px) {
+  .header-right {
+    position: relative;
+    bottom: 10px;  
+  }
+}
+@media (max-width: 738px) {
+  #Box{
+    height:400px;
+    background-color:#fff;
+    margin-top: 35px;
+    margin-bottom: 65px;
+    padding-right: 5px;
+    position: relative;
+    right: 100px;
+  }
+  .slick-slide img {
+    display: block;
+    margin-left: 240px;
+    width: 375px;
+  }
+  #step_mb{
+    background-color:#fff;
+  }
+
+  .slick-prev{
+    display:none;
+  }
+
+  .slick-next{
+    background-image:url('../images/iphone_next_arrow.png');
+    right:100px;
+    top:240px;
+    width:31px;
+    height:51px;
+    z-index:999;
+  }
+  .safety_sp {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .safety_sp h3 {
+    position: relative;
+    top: 8px;
+    font-size: 30px;
+  }
+  .safety_sp p {
+    position: relative;
+    bottom: 15px;
+    left: 50px;
+    font-size: 18px;
+    text-align: left;
+  }
+  #safety_sp_1 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 450px;
+  }
+  #safety_sp_2 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 450px;
+  }
+  .safety-image {
+    position: relative;
+    bottom: 5px;
+  }
+  #signup-title_mb {
+    font-size: 25px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text_mb {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  #signup_link_mb {
+    width: 225px;
+    margin-left: 170px;
+  }
+  #signup_link_mb a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link_mb a p {
+    width: 410px;
+    height: 75px;
+    font-size: 30px;
+    padding-left: 15px;
+    padding-top: 17px;
+    background-color: #f3b62a;
+    border-radius: 38px;
+    cursor: pointer;
+  }
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 87px;
+    right: 6px;
+  }
+  .pagetop a {
+    display: block;
+    background-color: #f3b62a;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+    line-height: 6;
+  }
+}
+@media (max-width: 667px) {
+  .header-right {
+    position: relative;
+    bottom: 10px;  
+  }
+
+  #Box{
+    height:400px;
+    background-color:#fff;
+    margin-top: 35px;
+    margin-bottom: 65px;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    right: 100px;
+  }
+  .slick-slide img {
+    display: block;
+    margin-left: 205px;
+    width: 375px;
+  }
+  #step_mb{
+    background-color:#fff;
+  }
+
+  .slick-prev{
+    display:none;
+  }
+
+  .slick-next{
+    background-image:url('../images/iphone_next_arrow.png');
+    right:50px;
+    top:240px;
+    width:31px;
+    height:51px;
+    z-index:999;
+  }
+  .safety_sp {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .safety_sp h3 {
+    position: relative;
+    top: 8px;
+    font-size: 30px;
+  }
+  .safety_sp p {
+    position: relative;
+    bottom: 15px;
+    left: 37px;
+    font-size: 17px;
+    text-align: left;
+  }
+  #safety_sp_1 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 400px;
+  }
+  #safety_sp_2 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 400px;
+  }
+  .safety-image {
+    position: relative;
+    bottom: 5px;
+  }
+  #signup-title_mb {
+    font-size: 25px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text_mb {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  #signup_link_mb {
+    width: 225px;
+    margin-left: 140px;
+  }
+  #signup_link_mb a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link_mb a p {
+    width: 410px;
+    height: 75px;
+    font-size: 30px;
+    padding-left: 15px;
+    padding-top: 17px;
+    background-color: #f3b62a;
+    border-radius: 38px;
+    cursor: pointer;
+  }
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 88px;
+    right: 6px;
+  }
+  .pagetop a {
+    display: block;
+    background-color: #f3b62a;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+    line-height: 6;
+  }
+}
+@media (max-width: 640px) {
+  .header-right {
+    position: relative;
+    bottom: 10px;  
+  }
+  #Box{
+    height:400px;
+    background-color:#fff;
+    margin-top: 35px;
+    margin-bottom: 65px;
+    padding-right: 50px;
+    position: relative;
+    right: 100px;
+  }
+  .slick-slide img {
+    display: block;
+    margin-left: 165px;
+    width: 375px;
+  }
+  #step_mb{
+    background-color:#fff;
+  }
+
+  .slick-prev{
+    display:none;
+  }
+
+  .slick-next{
+    background-image:url('../images/iphone_next_arrow.png');
+    right:-35px;
+    top:240px;
+    width:31px;
+    height:51px;
+    z-index:999;
+  }
+  .safety_sp {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .safety_sp h3 {
+    position: relative;
+    top: 8px;
+    font-size: 25px;
+  }
+  .safety_sp p {
+    position: relative;
+    bottom: 15px;
+    left: 25px;
+    font-size: 15px;
+    text-align: left;
+  }
+  #safety_sp_1 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 350px;
+  }
+  #safety_sp_2 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 350px;
+  }
+  .safety-image {
+    position: relative;
+    bottom: 5px;
+  }
+  #signup-title_mb {
+    font-size: 25px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text_mb {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  #signup_link_mb {
+    width: 225px;
+    margin-left: 120px;
+  }
+  #signup_link_mb a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link_mb a p {
+    width: 410px;
+    height: 75px;
+    font-size: 30px;
+    padding-left: 15px;
+    padding-top: 17px;
+    background-color: #f3b62a;
+    border-radius: 38px;
+    cursor: pointer;
+  }
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 85px;
+    right: 6px;
+  }
+  .pagetop a {
+    display: block;
+    background-color: #f3b62a;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+    line-height: 6;
+  }
+}
+@media (max-width: 600px) {
+  .about {
+    margin-top: 350px;
+  }
+  .safety_sp {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .safety_sp h3 {
+    position: relative;
+    top: 8px;
+    font-size: 25px;
+  }
+  .safety_sp p {
+    position: relative;
+    bottom: 30px;
+    left: 15px;
+    font-size: 15px;
+    text-align: left;
+  }
+  #safety_sp_1 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 350px;
+  }
+  #safety_sp_2 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 350px;
+  }
+  .safety-image {
+    position: relative;
+    bottom: 5px;
+  }
+  #signup-title_mb {
+    font-size: 25px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text_mb {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  #signup_link_mb {
+    width: 225px;
+    margin-left: 95px;
+  }
+  #signup_link_mb a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link_mb a p {
+    width: 410px;
+    height: 75px;
+    font-size: 30px;
+    padding-left: 15px;
+    padding-top: 17px;
+    background-color: #f3b62a;
+    border-radius: 38px;
+    cursor: pointer;
+  }
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 6px;
+  }
+  .pagetop a {
+    display: block;
+    background-color: #f3b62a;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+    line-height: 6;
+  }
+}
+@media (max-width: 570px) {
+  .safety_sp {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .safety_sp h3 {
+    position: relative;
+    top: 8px;
+    font-size: 25px;
+  }
+  .safety_sp p {
+    position: relative;
+    bottom: 30px;
+    left: 25px;
+    font-size: 15px;
+    text-align: left;
+  }
+  #safety_sp_1 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 350px;
+  }
+  #safety_sp_2 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 350px;
+  }
+  .safety-image {
+    position: relative;
+    bottom: 15px;
+  }
+  .slick-slide img {
+    display: block;
+    margin-left: 150px;
+    width: 375px;
+  }
+  #signup-title_mb {
+    font-size: 20px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text_mb {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  #signup_link_mb {
+    width: 225px;
+    margin-left: 95px;
+  }
+  #signup_link_mb a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link_mb a p {
+    width: 390px;
+    height: 60px;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-top: 13px;
+    background-color: #f3b62a;
+    border-radius: 28px;
+    cursor: pointer;
+  }
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 85px;
+    right: 6px;
+  }
+  .pagetop a {
+    display: block;
+    background-color: #f3b62a;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+    line-height: 6;
+  }
+}
+@media (max-width: 480px) {
+  /*iPhone6Plus縦対応*/
+  body {
+    background-image: none;
+    background-color: #fff;
+  }  
+  /*body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/bg_sp.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-color: #fff;
+  }*/
+  .site-description {
+    margin-bottom: 100px;
+    position: relative;
+    bottom: 245px;
+    right: 50px;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-family: "Meiryo-bold";
+    text-align: right;
+  }
+  .header-right {
+    position: relative;
+    bottom: 10px;  
+  }
+  .about {
+    margin-top: 0;
+  }
+  .button_sp {
+    width: 180px;
+    position: relative;
+    bottom: 260px;
+  }
+  .work-description {
+    height: 100%;
+  }
+  #main_img {
+    z-index: -1;
+  }
+  .safety_sp {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .safety_sp h3 {
+    position: relative;
+    top: 8px;
+    font-size: 20px;
+  }
+  .safety_sp p {
+    position: relative;
+    bottom: 15px;
+    left: 25px;
+    font-size: 10px;
+    text-align: left;
+  }
+  #safety_sp_1 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 250px;
+  }
+  #safety_sp_2 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 250px;
+  }
+  .safety-image {
+    position: relative;
+    bottom: 5px;
+  }
+  #signup-title_mb {
+    font-size: 15px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text_mb {
+    font-size: 10px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  #signup_link_mb {
+    width: 225px;
+    margin-left: 100px;
+  }
+  #signup_link_mb a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link_mb a p {
+    width: 220px;
+    height: 45px;
+    font-size: 15px;
+    padding-left: 7px;
+    padding-top: 10px;
+    background-color: #f3b62a;
+    border-radius: 28px;
+    cursor: pointer;
+  }
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 6px;
+  }
+  .pagetop a {
+    display: block;
+    background-color: #f3b62a;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+    line-height: 6;
+  }
+  #sign_up {
+    margin: 0 auto 300px auto;
+    position: absolute;
+    bottom: 0;
+    top: 110px;
+    right: 0;
+    left: 0;
+    width: 250px;
+    height: 290px;
+  }
+  #userid {
+    font-size: 16px;
+  }
+  #password {
+    font-size: 16px;
+  }
+  .fb_login_img{
+    width: 100%;
+    height: 50px;
+  }
+  /*.navbar-inverse h1 img {
+    width: 169px;
+    height: 34px;
+    margin-top: 8px;  
+  }*/
+  #Box{
+    height:400px;
+    background-color:#fff;
+    margin-top: 35px;
+    margin-bottom: 65px;
+    position: relative;
+    right: 0;
+  }
+  .slick-slide img {
+    display: block;
+    margin-left: -20px;
+    width: 375px;
+  }
+  .slick-next{
+    background-image:url('../images/iphone_next_arrow.png');
+    right:25px;
+    top:250px;
+    width:31px;
+    height:51px;
+    z-index:999;
+  }
+}
+/*@media (max-height: 480px) {
+  #sign_up {
+    margin: -6000px auto;
+    position: relative;
+    bottom: -30px;
+    width: 250px;
+    height: 369px;
+  }
+
+}*/
+@media (max-width: 384px) {  
+  /*.navbar-inverse {
+    position: fixed;
+    top: 0;
+    bottom: 20px;
+    height: 50px; 
+    z-index: 2000; 
+  }  /**/
+  .about {
+    margin-top: 0;
+  }
+  .work-description {
+    height: 100%;
+  }
+  #userid {
+    font-size: 16px;
+  }
+  #password {
+    font-size: 16px;
+  }
+  #sign_up {
+    margin: 0 auto 300px auto;
+    position: absolute;
+    bottom: 0;
+    top: 110px;
+    right: 0;
+    left: 0;
+    width: 250px;
+    height: 290px;
+  }
+  #userid {
+    font-size: 16px;
+  }
+  #password {
+    font-size: 16px;
+  }
+  .fb_login_img{
+    width: 100%;
+    height: 50px;
+  }
+  /*#fa {  
+    position: relative;
+    left: 90px;
+    bottom: 55px;
+  }  
+
+  #fa2 {
+    position: relative;
+    left: 90px;
+    bottom: 55px;
+  }*/
+}
+@media (max-width: 386px) {
+  /*android縦対応*/
+  /*iPhone6縦対応*/
+  .about {
+    margin-top: 0;
+  }
+  .work-description {
+    height: 100%;
+  }
+  .button_sp {
+    width: 140px;
+    height: 45px;
+    position: relative;
+    bottom: 260px;
+  }
+  .click_sp {
+    position: relative;
+    bottom: 5px;
+  }
+  .safety_sp {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .safety_sp h3 {
+    position: relative;
+    top: 8px;
+    font-size: 15px;
+  }
+  .safety_sp p {
+    position: relative;
+    bottom: 15px;
+    left: 18px;
+    font-size: 10px;
+    text-align: left;
+  }
+  #safety_sp_1 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 220px;
+  }
+  #safety_sp_2 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 220px;
+  }
+  .safety-image {
+    position: relative;
+    bottom: 5px;
+  }
+  #signup-title_mb {
+    font-size: 16px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text_mb {
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  #signup_link_mb {
+    width: 225px;
+    margin-left: 85px;
+  }
+  #signup_link_mb a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link_mb a p {
+    width: 220px;
+    height: 45px;
+    font-size: 15px;
+    padding-left: 7px;
+    padding-top: 10px;
+    background-color: #f3b62a;
+    border-radius: 28px;
+    cursor: pointer;
+  }
+  #sign_up {
+    margin: 0 auto 300px auto;
+    position: absolute;
+    bottom: 0;
+    top: 110px;
+    right: 0;
+    left: 0;
+    width: 250px;
+    height: 290px;
+  }
+  #userid {
+    font-size: 16px;
+  }
+  #password {
+    font-size: 16px;
+  }
+  .fb_login_img{
+    width: 100%;
+    height: 50px;
+  }
+  #Box {
+    height: 355px;
+    background-color: #fff;
+    position: relative;
+    bottom: 26px;
+    right: 0;
+    margin-top: 35px;
+    margin-bottom: 40px;
+  }
+  .slick-slide img {
+    display: block;
+    margin-left: -40px;
+    margin-top: -20px;
+    width: 360px;
+  }
+  .slick-next{
+    background-image:url('../images/iphone_next_arrow.png');
+    right:-10px;
+    top:205px;
+    width:31px;
+    height:51px;
+    z-index:999;
+  }
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 6px;
+  }
+  .pagetop a {
+    display: block;
+    background-color: #f3b62a;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+    line-height: 6;
+
+  }
+}
+@media (max-width: 360px) {
+  .safety_sp {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .safety_sp h3 {
+    position: relative;
+    top: 8px;
+    font-size: 15px;
+  }
+  .safety_sp p {
+    position: relative;
+    bottom: 15px;
+    left: 15px;
+    font-size: 10px;
+    text-align: left;
+  }
+  #safety_sp_1 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 220px;
+  }
+  #safety_sp_2 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 220px;
+  }
+  .safety-image {
+    position: relative;
+    bottom: 5px;
+  }
+  #signup_link_mb {
+    width: 225px;
+    margin-left: 75px;
+  }
+  #signup-title_mb {
+    font-size: 15px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text_mb {
+    font-size: 10px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  #signup_link_mb a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link_mb a p {
+    width: 220px;
+    height: 45px;
+    font-size: 15px;
+    padding-left: 7px;
+    padding-top: 10px;
+    line-height: 1.8;
+    background-color: #f3b62a;
+    border-radius: 28px;
+    cursor: pointer;
+  }
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 85px;
+    right: 6px;
+  }
+  .pagetop a {
+    display: block;
+    background-color: #f3b62a;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    line-height: 6;
+    font-size: 10px;
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+  }
+}
+@media (max-width: 340px) {
+  /*iPhone5縦対応*/
+  .about {
+    margin-top: 0;
+  }
+  .work-description {
+    height: 100%;
+  }
+  .buttons .button {
+    margin: 5px;
+  }
+  .button_sp {
+    width: 140px;
+    height: 45px;
+    position: relative;
+    bottom: 260px;
+  }
+  .click_sp {
+    position: relative;
+    bottom: 5px;
+  }
+  .skill-tool_mb {
+    left: -2px;
+    margin: 0 auto;
+    display: none;
+    position: relative;
+  }
+  .skill-matching_mb {
+    top: -2px;
+    margin: 0 auto;
+    display: none;
+    position: relative;
+  }
+  .skill-jobsearch_mb {
+    right: -2px;
+    margin: 0 auto;
+    display: none;
+    position: relative;
+  }
+  .safety_sp {
+    margin: 0 auto;
+    width: 960px;
+  }
+  .safety_sp h3 {
+    position: relative;
+    top: 8px;
+    font-size: 15px;
+  }
+  .safety_sp p {
+    position: relative;
+    bottom: 15px;
+    left: 5px;
+    font-size: 10px;
+    text-align: left;
+  }
+  #safety_sp_1 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 200px;
+  }
+  #safety_sp_2 {
+    width: 50%;
+    position: relative;
+    background-color: #e6e6e6;
+    height: 200px;
+  }
+  .safety-image {
+    position: relative;
+    bottom: 5px;
+  }  
+
+  #signup-title_mb {
+    font-size: 15px;
+    margin: 0 auto;
+    color: #333333;
+  } 
+  #signup-text_mb {
+    font-size: 10px;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #333333;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  #signup_link_mb {
+    width: 225px;
+    margin-left: 50px;
+  }
+  #signup_link_mb a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #signup_link_mb a p {
+    width: 220px;
+    height: 45px;
+    font-size: 15px;
+    padding-left: 7px;
+    padding-top: 10px;
+    background-color: #f3b62a;
+    border-radius: 28px;
+    cursor: pointer;
+  }
+  #sign_up {
+    margin: 0 auto 300px auto;
+    position: absolute;
+    bottom: 0;
+    top: 110px;
+    right: 0;
+    left: 0;
+    width: 250px;
+    height: 290px;
+  }
+  #userid {
+    font-size: 16px;
+  }
+  #password {
+    font-size: 16px;
+  }
+  .fb_login_img{
+    width: 100%;
+    height: 50px;
+  }
+  .skill-text_mb {
+    font-size: 12px;
+  }
+  #Box {
+    height: 280px;
+    background-color: #fff;
+    position: relative;
+    bottom: 26px;
+    margin-top: 35px;
+    margin-bottom: 40px;
+  }
+  .slick-slide img {
+    display: block;
+    margin-left: -25px;
+    margin-top: -20px;
+    width: 290px;
+  }
+  .slick-next{
+    background-image:url('../images/iphone_next_arrow.png');
+    right:0;
+    top:155px;
+    width:31px;
+    height:51px;
+    z-index:999;
+  }
+  .skill-images_mb {
+    width: 286px;
+    height: 180px;
+    position: relative;
+    right: 0;
+    left: -15px;
+  }
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 82px;
+    right: 6px;
+  }
+  .pagetop a {
+    display: block;
+    background-color: #f3b62a;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 6;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+  }
+}

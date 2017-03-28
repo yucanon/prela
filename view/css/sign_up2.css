@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+
+/*!
+ * Start Bootstrap - Blog Post HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.container {
+  margin: 0 auto;
+  padding-top:65px;
+  min-height:500px;
+  box-sizing:border-box;
+}
+
+.row{
+  padding-top:50px;
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.row h4{
+  margin:0px;
+  padding-top:7px;
+  padding-left:7px;
+  background-color:#f3b62a;
+  color:#ffffff;
+  height:30px;
+  border-radius: 4px;
+  text-align:left;
+}
+
+.btn-success{
+  background-color:#6ba8a3;
+  margin-left:10px;
+}
+
+
+/*
+@media (min-width: 992px) {
+  .h-outer {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .h-outer {
+    width: 1170px;
+  }
+}
+  */
+
+/* << Add */
+
+
+/* Add >> */
+
+footer {
+
+}
+
+footer p {
+
+}
+
+@media (max-width: 767px) {
+  .thumbnail-info{
+  }
+}
+
+@media (max-width: 386px) {
+
+  body{
+  }
+
+  .container{
+    width:100%;
+    margin: 0 auto;
+    padding-top:0px;
+    box-sizing:border-box; 
+  }
+}
+
+@media (min-width: 768px) {
+  .container{
+    width: 960px;
+  }
+
+}
+
+/*
+@media (min-width: 992px) {
+  .footer-word {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-word {
+    width: 1170px;
+    margin: 0 auto;
+  }
+}
+*/
+
+/* << Add */
